@@ -17,7 +17,7 @@ export default async function handler(req, res) {
       return res.status(500).json({ error: "Falta GEMINI_API_KEY en Vercel" });
     }
 
-    const { imageBase64, mimeType, rawText, model = "gemini-2.5-flash" } = req.body || {};
+    const { imageBase64, mimeType, rawText, model = "gemini-3.8-flash" } = req.body || {};
 
     const prompt = `Extrae los datos del jugador de Hattrick en JSON estricto con estas claves:
 id, name, isAcademy, ageYears, ageDays, spec, tsi, porteria, defensa, jugadas, lateral, pases, anotacion, balonParado, resistencia, liderazgo, experiencia, team, country, character.`;
